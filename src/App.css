@@ -22,11 +22,160 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.ion-plus-circled{
+  font-size: 20px;
+  color: rgb(153, 0, 51);
+  display: inline-block;
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+}
+
+.ion-ios7-minus{
+  font-size: 36px;
+  color: rgb(153, 0, 51);
+  position: relative;
+  right: 20px;
+  bottom: 8px;
+}
+
+.add-item-bar{
+  border: solid .5px rgb(204, 153, 0);
+  border-radius: 50px;
+  width: 250px;
+  padding: 5px;
+
+}
+
+.ion-ios7-checkmark{
+ font-size: 48px;
+
+}
+
+.bottom-bar{
+  height: 50px;
+  position: relative;
+  width: 300px;
+  margin: auto;
+}
+
+
+input[type=checkbox] {
+  transform: scale(1.5);
+  color: grey;
+}
+
+@media (max-width: 700px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 75%;
+    position: relative;
+    margin: auto;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media (max-width:1200px) and (min-width:700px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    position: relative;
+    margin: auto;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
   }
+}
+@media (min-width: 1200px) {
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 30%;
+  position: relative;
+  margin: auto;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+}
+}
+
+.container input {;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+
+}
+
+.checkmark {
+  position: absolute;
+  top: 5px;
+  height: 30px;
+  width: 30px;
+
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+  border-radius: 50px;
+
+}
+
+.container input:checked ~ .checkmark {
+  background-color:  rgb(204, 153, 0);
+  border-radius: 50px;
+
+}
+
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+
+}
+
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+
+}
+
+
+.item-font{
+  font-family: 'Dekko', cursive;
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(153, 0, 51);
+  width: 65%;
+  overflow:auto;
+
+}
+
+.nav{
+background-color: rgb(153, 0, 51);
+color: rgb(204, 153, 0);
+padding: 5px;
+}
+
+ul{
+  list-style-type: none;
 }
